@@ -1,0 +1,81 @@
+#headingTwo {
+    margin-top: -40rem;
+   
+}
+
+.bannerTwo {
+   
+    display: grid;
+    grid-template-rows: 35rem;
+    grid-template-columns: repeat(6, 1fr);
+    
+
+    &__container {
+        grid-row: 1 / -1;
+        grid-column: 5 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+        position: relative;
+        
+    }
+    &__p {
+        text-align: center;
+        font-size: 1.9rem;
+        color: $color-secondary;
+        
+    }
+    &__img {
+        width: 40rem;
+    }
+
+    &__btn {
+       margin-right: 2rem;
+    }
+
+
+}
+.bannerTwo__info {
+         
+    position: absolute;
+    top: -15rem;
+    left: -5rem;
+    background: $color-primary;
+    color: $color-white;
+    padding: 2rem;
+    border-radius: 3rem;
+    width: 27rem;
+    margin: 0;
+    clip-path: circle(15% at 17% 75%); 
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    
+
+    &:hover {
+        clip-path: circle(75%);
+        background: $color-secondary;
+        
+    }
+    &:hover .bannerTwo__info--icon {
+        opacity: 0;
+    }
+
+    &--span {
+        position: relative;
+        margin-right: -4%;
+        transition: all .5s ease-in-out;
+    }
+
+    &--icon {
+        font-size: 3.5rem;
+         float: left;
+         padding-left: 2rem;
+         padding-bottom: 3.5rem;
+        
+    }
+    
+}
+
+

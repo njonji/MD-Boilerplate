@@ -1,0 +1,87 @@
+
+.header {
+    margin-top: -12.5rem;
+    overflow: hidden;
+}
+.banner {
+
+        min-height: calc(100vh + 8px);
+        background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/assets/img/banner/office.jpg")center/cover fixed no-repeat;
+        clip-path: polygon(0% 0%, 100% 0, 100% 19%, 23% 100%, 0% 100%);
+        display: grid;
+        grid-template-rows: 35rem 35rem;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+       
+        &__title {
+            grid-row: 1 / 2;
+            grid-column: 1 / 12;
+            position: relative;
+            margin-left: 8rem;
+            margin-top: 3rem;
+
+            &--horizontal {
+                color: $color-white;
+                font-size: 3.5rem;
+                font-weight: 400;  
+                letter-spacing: .3rem;
+                   
+            }
+            &--vertical {
+                font-size: 3.5rem;
+                font-weight: 400;  
+                color: $color-white;
+                letter-spacing: .3rem;
+                display: inline-block;
+                transform: rotate(-90deg);
+                position: absolute;
+                top: 10rem;
+                left: -12rem;
+            }
+            &--span {
+                color: $color-primary;    
+            }
+           
+        }
+        &__content {
+            grid-row: 2 / 3;
+            grid-column: 2 / 11;
+            justify-content: start;
+            align-items: center;
+            margin-top: -15rem;
+            @media only screen and (max-width:$bp-wide-4) {
+                grid-column: 2 / 10;
+            }
+            
+
+            &--p {
+                color: $color-white;
+                font-size: 1.9rem;
+                text-align: center;
+                margin-bottom: 15rem;
+                font-weight: 500;
+                letter-spacing: .2rem;
+            }
+            &--btn {
+               
+                @media only screen and (max-width:$bp-wide-4) {
+                   align-self: flex-start !important;
+                }
+            }
+         
+            
+         
+        }
+    }
+
+
+
+
+
+
+
+
+
+  
+
+

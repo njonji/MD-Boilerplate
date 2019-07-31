@@ -1,0 +1,52 @@
+.navbar {
+     
+     
+    clip-path: polygon(0 0, 100% 0,100% 65%,50% 100%, 0 65%);
+    background: $color-grey-light;
+    z-index: 20;
+    &__links {
+         padding-right: 20rem;
+        @media only screen and (max-width:$bp-large) {
+            margin: 0;
+            text-align: center;
+            padding: 0 0 2rem 0;
+        }
+    }
+
+    &--logo {
+      padding-bottom: 3.5rem;
+    }
+  }
+  .navbar-icon {
+    font-size: 3rem;
+    color: $color-black;
+  }
+  .navbar-toggler {
+    outline: none !important;
+    padding-bottom: 3.5rem !important;
+  }
+  .nav-link {
+    color: $color-text;
+    text-transform: capitalize;
+    font-family:  "Montserrat", sans-serif !important;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: all .4s linear;
+    font-size: 2rem;
+  }
+  .nav-link:hover {
+    color: $color-primary;
+  }
+  .underline {
+    width: 5rem;
+    height: .3rem;
+    background: $color-primary;
+    margin: .5rem auto;
+    opacity:0;
+    transition: all .5s linear;
+  }
+  .nav-link:hover ~.underline {
+      opacity: 1;
+  }
+

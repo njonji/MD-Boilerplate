@@ -1,0 +1,120 @@
+.customBtn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.4rem 2.3rem;
+        display: inline-block;
+        border-radius: 0.3rem;
+        letter-spacing: .2rem;
+        
+        position: relative;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-top: 1rem;
+
+        border:none;
+        cursor: pointer;
+        transition: all .3s linear;
+       
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(#000,.2);
+       &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+        
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-3px);
+        box-shadow: 0 .5rem 1rem rgba(#000,.2);
+    }
+    
+    &--white {
+        background-color:$color-primary;
+        color:#fff;
+    }
+    &--green {
+        background-color: $color-primary;
+        color:#fff;
+        &::after {
+            background-color: $color-primary;
+        }    
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    
+    }
+    
+    
+    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+}
+
+.customBtn-text {
+    &:link,
+    &:visited {
+        font-size: 1.4rem;
+        color:#000;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 2px solid $color-primary;
+        padding: .8rem;
+        transition: all .3s;
+        text-transform: uppercase;
+        margin-left: 1.5rem;
+    }
+    &:hover {
+        background-color:$color-primary;
+        color: #fff;
+        box-shadow: 0 1rem 2rem rgba(#000, .15);
+        transform: translateY(-2px);
+
+    }
+    &:active {
+        box-shadow: 0 1rem 2rem rgba(#000, .15);
+        transform: translateY(0);
+
+      }
+   }
+
+
+   /* CUSTOM NAV TOGGLER */
+   .bars {
+       width: 3.5rem;
+       height: 5px;
+       background-color: #333;
+       margin: 6px 0;
+       transition: .4s ease;
+   }
+
+  .change1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change3 {
+      transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .change2 {
+      opacity: 0;
+  } 

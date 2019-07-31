@@ -33,7 +33,7 @@ module.exports = {
         }
       }
     },
-  
+    
    {
      test:/\.scss$/,
      exclude: /node_modules/,
@@ -45,5 +45,4 @@ module.exports = {
      ]
    }]
   }
-
 };
