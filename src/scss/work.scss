@@ -1,0 +1,418 @@
+#work {
+    margin-top: 10rem;
+    padding-top: 4rem;
+   
+}
+
+.work {
+    display: grid;
+    grid-template-rows: 10rem max-content max-content;
+    grid-template-columns: repeat(13, 1fr);
+    @media only screen and (max-width:$bp-small) {
+        grid-template-rows: 10rem max-content max-content ;
+     } 
+
+    &__title {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    }
+
+    &__card--1 {
+        grid-row: 2 / 3;
+        grid-column: 4 / 7;
+        @media only screen and (max-width:$bp-wide-3) {
+            grid-column: 3 / 7;
+         }
+         @media only screen and (max-width:$bp-large) {
+            grid-column: 2 / 7;
+         }
+         @media only screen and (max-width:$bp-small) {
+            grid-column: 3 / 12;
+            
+        } 
+         @media only screen and (max-width:$bp-small-4) {
+            grid-column: 2 / 13;
+            
+        } 
+      
+    }
+    &__card--2 {
+        grid-row: 2 / 3;
+        grid-column: 8 / 11;
+        @media only screen and (max-width:$bp-wide-3) {
+            grid-column: 8 / 12;
+         }
+        @media only screen and (max-width:$bp-large) {
+            grid-column: 8 / 13;
+         }
+         @media only screen and (max-width:$bp-small) {
+             grid-column: 3 / 12;
+             grid-row: 3 / 4;
+         } 
+         @media only screen and (max-width:$bp-small-4) {
+            grid-column: 2 / 13;
+            
+        } 
+    }
+    &__side {
+        grid-row: 3 / -1;
+        grid-column: 1 / -1;
+        margin:14rem 0 8rem 0;
+        padding-bottom: 10rem;
+        padding-top: 3rem;
+        display: grid;
+        grid-template-rows: 10rem max-content;
+        grid-template-columns: repeat(12, 1fr);
+        background: $color-grey-light;
+        @media only screen and (max-width:$bp-small) {
+            grid-row: 4 / -1;
+         } 
+
+        &--title {
+           grid-row: 1 / -1;
+           grid-column: 2 / -1;
+           margin-top: 4rem;
+           @media only screen and (max-width:$bp-small-4) {
+            margin-left: 1.2rem;
+         } 
+           
+        }
+
+        &--projects {
+            grid-row: 2 / -1;
+            grid-column: 2 / -1;
+            align-self: center;
+            color: $color-text;
+            justify-self: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+
+
+        }
+    }
+}
+
+.projects--overlay {
+    background: rgba($color-black,.9);
+    border-radius: 1rem;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+.project {
+    position: relative;
+    width: 50rem;
+    text-align: center;
+    background: $color-white;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    overflow: hidden;
+    margin:4rem 4rem 0 0 ;
+
+
+
+    &:hover .projects--overlay {
+        opacity: 1;
+
+    }
+    &:hover &__btn {
+        transform: translateY(0);
+    }
+    &__h2 {
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+
+    &__p {
+        font-size: 1.7rem;
+
+        &--2 {
+            margin-top: 3rem;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 42%;
+        left: 25%;
+        font-size: 2.5rem;
+        text-decoration: none;
+        color: $color-primary;
+        background: rgba($color-black, .3);
+        display: inline-block;
+        padding: .2rem .5rem;
+        border: 2px solid $color-primary;
+        border-radius: 2rem;
+        transition: all .7s ease-in-out;
+        transform: translateY(450%);
+
+        &:hover {
+            text-decoration: none;
+            background: $color-primary;
+            color: $color-white;
+        }
+    } 
+
+    @media only screen and (max-width:$bp-large),
+    only screen and (hover:none)  { 
+        
+       /*  PROJECT */
+        width: 45rem;
+        text-align: center;
+        background: $color-white;
+        padding: 1rem 4rem;
+        border-radius: 1rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        margin:4rem 4rem 0 0 ;
+   
+     
+
+        &:hover .projects--overlay {
+            opacity: 0;
+    
+        }
+        &:hover &__btn {
+            transform: none;
+        }
+        &__h2 {
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+    
+        &__p {
+            font-size: 1.5rem;
+        }
+    
+        &__btn {
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 2rem;
+            text-decoration: none;
+            color: $color-primary;
+            display: inline-block;
+            padding: .2rem .5rem;
+            border: 2px solid $color-primary;
+            border-radius: 2rem;
+            transition: all .7s ease-in-out;
+            transform: none;
+            background: none;
+            margin-top: 2rem;
+            
+    
+            &:hover {
+                text-decoration: none;
+                background: $color-primary;
+                color: $color-white;
+            }
+        } 
+    
+     }
+          /* SMALL */
+     @media only screen and (max-width:$bp-small) {
+        width: 35rem;
+      }  
+}
+
+
+
+
+
+//FUNCIONALITY
+.karta {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 40rem;
+  margin-top: 5rem;
+  
+
+  &__side {
+    color: white;
+    font-size: 2rem;
+    height: 40rem;
+    transition: all .9s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    
+
+    &--front{
+        background-color: $color-white;
+    }
+
+    &--back {
+        transform: rotateY(-180deg);
+        background:linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url("/assets/img/projects/projectback.jpg")center/cover  no-repeat;
+    }
+  }
+
+  &:hover &__side--front {
+      transform: rotateY(180deg);
+  } 
+  &:hover &__side--back {
+      transform: rotateY(0);
+  }
+
+
+  /* FRONT SIDE OF CARD */
+
+
+  &__heading {
+    text-align: center;
+    margin-top: 2rem;
+    &--h1 {
+        color: $color-text;
+    }
+  }
+
+  &__details {
+    margin:1rem 1rem;
+    color: $color-text;
+    text-align: center;
+    &--p {
+        font-size: 1.7rem;
+        
+    }
+
+    &--span {
+        font-size: 1.2rem;
+        text-decoration: italic;
+        display: block;
+        padding-top: 2.5rem;
+    }
+    
+  }
+
+      /* BACK SIDE KARTA */
+
+      &__links {
+        height: 100%;
+
+        &--ul {
+            list-style: none;
+            font-size: 1.7rem;
+            font-weight: bold;
+            padding: 0;
+            text-align: center;
+            
+        }
+        &--title {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        &--btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+
+            &-1 {
+                margin-left: 1rem;
+                
+            }
+            
+            &-2 {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+
+    @media only screen and (max-width:$bp-large),
+    only screen and (hover:none)  { 
+       //FUNCIONALITY
+  .karta {
+  
+   
+    height: auto !important;
+    margin-top: 5rem;
+
+  
+  
+    &__side {
+      color: $color-white;
+      font-size: 2rem;
+      height: auto !important; 
+      position: relative;
+      border-radius: 3px;
+      padding-bottom: 4rem;
+      box-shadow: none;
+  
+      &--front{
+          background-color: $color-grey-light;
+      }
+  
+      &--back {
+          transform: rotateY(0);
+          background:$color-grey-light;
+          
+      }
+    }
+  
+    &:hover &__side--front {
+        transform: rotateY(0);
+    } 
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+  
+  
+    /* FRONT SIDE OF CARD */
+  
+  
+    &__heading {
+      text-align: center;
+      margin-top: 2rem;
+      &--h1 {
+          color: $color-text;
+      }
+    }
+  
+    &__details {
+      margin:1rem 1rem;
+      color: $color-text;
+      text-align: center;
+      &--p {
+          font-size: 1.6rem;
+          
+      }
+  
+      &--span {
+          display: none;
+      }
+      
+    }
+  
+        /* BACK SIDE KARTA */
+  
+        &__links {
+          color: $color-text;
+          margin-top: -2rem;
+          height: auto;
+    
+          &--ul {
+             display: none;
+              
+          }
+          &--title {
+              display: none;
+          }
+      }
+  }
+}

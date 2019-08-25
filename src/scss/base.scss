@@ -8,6 +8,18 @@
 html {
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
+   
+    @media only screen and (max-width:$bp-huge) {
+        font-size: 57%;
+    }
+    @media only screen and (max-width:$bp-large) {
+        font-size: 53%;
+    }
+    @media only screen and (max-width:$bp-small-3) {
+        font-size: 47%;
+    }
+
+
 }
 body {
     box-sizing: border-box;
@@ -22,4 +34,44 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Montserrat', sans-serif;
+}
+
+
+::selection {
+    background-color: $color-primary !important;
+    color:$color-white !important;
+}
+
+
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+ #preloader {
+    background-color: rgba($color: #eeee, $alpha: 1);
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: 200;
+}
+#status {
+    background-image: url(/preloader.svg);
+    background-repeat: no-repeat;
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -8.5rem;
+    margin-top: -12.5rem; 
+   
+ } 
+
+.hiddenLoader {
+    animation: fadeOut 1s;
 }

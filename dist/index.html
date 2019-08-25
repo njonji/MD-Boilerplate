@@ -6,32 +6,78 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600|Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/main.css" >
-  <title>MD Studio</title>
+
+  <link rel="shortcut icon" type="image/png" href="assets/img/logo/logosmall.png">
+  <title>Web Design & Development Freelance Studio</title>
 </head>
 <body>
+
+   <!--   PRELOADER -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>  
+<!-- PRELOADER END -->
+ 
+
+  <!-- second navbar -->
+<div class="navigation ">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon navbar-icon"><div class="secondbar1 bars bars__second"></div><div class="secondbar2 bars bars__second"></div><div class="secondbar3 bars bars__second"></div></span>
+    </label>
+  <div class="navigation__background">&nbsp;</div>
+  <nav class="navigation__nav">
+      <ul class="navigation__list">
+          <li class="navigation__item">
+            <div class="navigation__logo"> 
+              <img src="assets/img/logo/logosmalldark.png" alt="">
+            </div>
+          </li>
+          <li class="navigation__item">
+            <a href="#header" class="navigation__link smooth-scroll">Home</a>
+            <div class="underline"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#about" class="navigation__link smooth-scroll">About</a>
+            <div class="underline"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#work" class="navigation__link smooth-scroll">Projects</a>
+            <div class="underline"></div>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact" class="navigation__link smooth-scroll">Contact</a>
+            <div class="underline"></div>
+          </li>
+      </ul>
+  </nav>
+</div>
+  <!-- second navbar end -->
+
 <!-- nav -->
 <nav class="navbar navbar-expand-lg px-4" id="navBar">
   <a href="#" class="navbar-brand"> 
-    <img src="assets/img/logo/logonav.png" class="navbar--logo"alt="logo">
+    <img src="assets/img/logo/logonew.png" class="navbar--logo"alt="logo">
+
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav"><span class="navbar-icon">
     <div class="bar1 bars"></div><div class="bar2 bars"></div><div class="bar3 bars"></div> </span></button>
   <div class="collapse navbar-collapse" id="myNav">
     <ul class="navbar-nav mx-auto navbar__links">
       <li class="nav-item active">
-        <a href="#navBar" class="nav-link">home</a>
+        <a href="#navBar" class="nav-link smooth-scroll">home</a>
         <div class="underline"></div>
       </li>
       <li class="nav-item">
-        <a href="#skills" class="nav-link">about</a>
+        <a href="#about" class="nav-link smooth-scroll">about</a>
         <div class="underline"></div>
       </li>
       <li class="nav-item">
-        <a href="#inventory" class="nav-link">projects</a>
+        <a href="#work" class="nav-link smooth-scroll">projects</a>
         <div class="underline"></div>
       </li>
       <li class="nav-item">
-        <a href="#featured" class="nav-link">contact</a>
+        <a href="#contact" class="nav-link nav-link--last smooth-scroll">contact</a>
         <div class="underline"></div>
       </li>
     </ul>
@@ -40,6 +86,8 @@
   </div>
 </nav>
 <!-- nav  end-->
+
+
 <!-- banner -->
 <header class="header" id="header">
     <div class="banner">
@@ -47,17 +95,12 @@
           <div class="banner__title text-capitalize">
             <h1 class="banner__title--horizontal"> Web development <span class="banner__title--span"><strong>freelancing</strong></span>  studio</h1>
             <h1 class="banner__title--vertical"> Frontend</h1>
+            <!-- <img src="assets/img/banner/man1.png" class="img-fluid banner__title--img" alt="Man"> -->
            </div>
         
-          <div class="banner__content d-flex">
-              <div>
-                  <img src="assets/img/banner/man1.png" class="img-fluid banner__content--img" alt="Man">
-                </div>
-                <div class="banner__content--text d-flex flex-column align-items-center">
-                    <p class="banner__content--p">With us you can go from stunning website design <br> to flawless code for fully responsive, modern web app.
-                      <br>Click on the button below to learn more.</p>
-                     <button class="customBtn customBtn--white banner__content--btn">About Us</button>
-                </div>
+          <div class="banner__content">
+              <h2 class="banner__content--h2">We create <span class="type banner__content--h2-span"></span></h2>
+              <a href="#about" class="butto butto--white banner__content--btn smooth-scroll">Learn more</a>
            </div>
   </div>
 <!-- banner end -->
@@ -67,17 +110,334 @@
     <div class="bannerTwo ">
       <div class="bannerTwo__container">
           <div class="bannerTwo__info">
-              <h1>We provide services for fully responsive, modern website for a reasonable price</h1>
+              <h1 class="bannerTwo__info--h1">Services for fully responsive, modern websites at a reasonable price.</h1>
               <span class="bannerTwo__info--span"><i class="fas fa-info bannerTwo__info--icon"></i></span>
-              <button class="customBtn customBtn--white bannerTwo__btn">Our Work</button> 
+              <a href="#work" class="butto butto--white  bannerTwo__info--btn smooth-scroll">Our Work</a>
             </div>
        
          <img src="assets/img/banner/comp2.png" class="img-fluid bannerTwo__img" alt="Desk">
       </div>
+  
+   <!--    <div class="bannerTwo__skills">
+        <div> <i class="fas fa-gem bannerTwo__skills--gem bannerTwo__skills--icons"></i> 
+            <p class="bannerTwo__skills--p">Cutting edge design</p>
+        </div>
+       <div> <i class="fas fa-code bannerTwo__skills--code bannerTwo__skills--icons"></i>
+        <p class="bannerTwo__skills--p">Flawless code</p>
+      </div>
+       <div><i class="fas fa-heart bannerTwo__skills--heart bannerTwo__skills--icons"></i>
+        <p class="bannerTwo__skills--p"> Made with love</p>
+      </div>
+        
+        
+      </div> -->
       
     </div>
 </section>
 <!-- heading two end -->
+
+<!-- about section start -->
+<section id="about">
+  <div data-sal="slide-up" data-sal-duration= "1400" data-sal-delay="0" data-sal-easing="ease-out-bounce" class="about" >
+    
+    <div class="about__img" >
+        <img src="assets/img/banner/superman.png" class="about__img--superman img-fluid" alt="Superman">
+        <img src="assets/img/logo/logosmall.png" class="about__img--logo"alt="logo">
+    </div>
+
+
+     <div class="about__text">
+       <div class="about__text--title">
+          <h1 class="about__text--title-h1">What is <span class="about__text--title-span">MD</span> Studio ?</h1>
+       </div>
+       <div class="about__text--content">
+         <p class="about__text--content-p">
+           I have been using the word "we", but it is actually "I". I am Veladzic S., founder 
+           and the only employee of freelancing design and development studio that is MD.
+           I started front end development as a hobby, later done some freelancing work, loved doing it so much that I am looking to make it my full-time career.
+          I am perpetually working on improving my skills and I am having a lot of fun doing so. 
+         </p>   
+       </div>
+     </div>
+     <div class="about__calltoaction">
+      <p class="about__calltoaction--p">I believe in hands on approach so by hiring me 
+        we can together design and create modern webiste that is unique to your business and speaks volumes for potential customers. <br>Want a modern, responsive website ?</p>
+      <a href="#contact" class="butto-text about__calltoaction--btn smooth-scroll">Contact me</a>
+     </div>
+  </div>
+</section>
+<!-- about section start end -->
+<!-- skills start -->
+<section id="skills">
+  <div class="skills" data-sal="slide-up" data-sal-duration= "1400" data-sal-delay="0" data-sal-easing="ease-out-bounce">
+      <div class="skills__title title">
+        <h1 class="title--h1">My development <span class="title--span">Tools</span></h1>
+        <div class="title__underline"></div>
+      </div>
+      <div class="skills__text">
+        <p class="skills__text--p">
+          Tools and tech I use to build modern websites are
+         <strong>HTML</strong>, <strong>CSS</strong> with <strong>Sass</strong>, <strong>Bootstrap</strong>, <strong>JavaScript</strong> and <strong>jQuery plugins.</strong>   
+          Combining this tools with <strong>Webpack</strong> and <strong>Babel</strong>, web apps build by me are compressed, light, responsive
+           and are fully compatible with older browser versions, thus making it accessible to wider range of users.
+        </p>
+      </div>
+      <div class="skills__icons">
+        <div> <i class="fas fa-gem skills__icons--gem skills__icons--all"></i> 
+          <p class="skills__icons--p">Cutting edge design</p>
+      </div>
+     <div> <i class="fas fa-code skills__icons--code skills__icons--all"></i>
+      <p class="skills__icons--p">Flawless code</p>
+    </div>
+     <div><i class="fas fa-headset skills__icons--heart skills__icons--all"></i>
+      <p class="skills__icons--p"> 24/7 Support</p>
+    </div>
+      </div>
+  </div>
+</section>
+<!-- skills end -->
+<!-- work section start -->
+<section id="work">
+  <div class="work" >
+    <div class="work__title title__dark" data-sal="slide-up" data-sal-duration= "1400" data-sal-delay="0" data-sal-easing="ease-out-bounce" >
+        <h1 class="title__dark--h1">My latest <span class="title__dark--span">Projects</span></h1>
+        <div class="title__underline"></div>
+    </div>
+    <!-- single card -->
+    <div class="work__card--1" data-sal="slide-up" data-sal-duration= "1400" data-sal-delay="0" data-sal-easing="ease-out-bounce" >
+        <div class="karta">
+          <div class="karta__side karta__side--front">
+              <div class="karta__picture ">
+                <img src="assets/img/projects/inesaweb.png" class="karta__picture--1 img-fluid" alt="Inesa">
+              </div>
+              <div class="karta__heading">
+                   <h1 class="karta__heading--h1">Inesa Balic Art</h1>
+                   <div class="title__underline title__underline--inesa"></div>
+                   
+              </div>
+              <div class="karta__details d-flex flex-column">
+                 <p class="karta__details--p align-self-center">
+                  The Website build for a drawing artist from Bihać, Bosnia.
+                 </p>
+   
+                  <span class="karta__details--span align-self-end justify-self-end"> Links to site <i class="fas fa-arrow-right"></i></span>
+               
+              </div>
+          </div>           
+          <div class="karta__side karta__side--back">
+              <div class="karta__links d-flex flex-column align-items-center justify-content-center">
+                <h3 class="karta__links--title">Made by :</h3>
+                  <ul class="karta__links--ul align-self-center">
+                      <li>Html</li>
+                      <li>Css with Sass</li>
+                      <li>Bootstrap</li>
+                      <li>Custom JavaScript</li>
+                      <li>jQuerry plugins</li>
+                    </ul>
+                    <div class="karta__links--btns">
+                        <a href="https://artinesa.com/" class="butto butto--white karta__links--btns-1">Visit website <i class="far fa-hand-point-up"></i></a>
+                        <a href="https://github.com/njonji/artInesa" class="butto butto--white karta__links--btns-2">GitHub Rep <i class="fab fa-github"></i></a>
+                    </div>
+
+                </div>
+          </div>           
+      </div>
+  </div>
+<!-- single card end -->
+    <!-- single card -->
+    <div class="work__card--2" data-sal="slide-up" data-sal-duration= "1400" data-sal-delay="0" data-sal-easing="ease-out-bounce" >
+        <div class="karta">
+          <div class="karta__side karta__side--front">
+              <div class="karta__picture karta__picture--2">
+                  <img src="assets/img/projects/harbaSmall.png" class="karta__picture--2 img-fluid" alt="Harba">
+              </div>
+              <div class="karta__heading">
+                   <h1 class="karta__heading--h1">PetVet Bihac</h1>
+                   <div class="title__underline title__underline--harba"></div>
+              </div>
+              <div class="karta__details d-flex flex-column">
+                 <p class="karta__details--p align-self-center">
+                  The Website build for a veterinary clinic in Bihać, Bosnia.
+                 </p>
+        
+                  <span class="karta__details--span karta__details--harba align-self-end justify-self-end"> Links to site <i class="fas fa-arrow-right"></i></span>
+              </div>
+          </div>           
+          <div class="karta__side karta__side--back">
+              <div class="karta__links d-flex flex-column align-items-center justify-content-center">
+                  <h3 class="karta__links--title">Made by :</h3>
+                  <ul class="karta__links--ul align-self-center">
+                      <li>Html</li>
+                      <li>Css with Sass</li>
+                      <li>Custom JavaScript</li>
+                      <li>jQuerry plugins</li>
+                    </ul>
+                    <div class="karta__links--btns">
+                        <a href="https://petvetbihac.com/" class="butto butto--white karta__links--btns-1">Visit website <i class="far fa-hand-point-up"></i></a>
+                        <a href="https://github.com/njonji/PetVet" class="butto butto--white karta__links--btns-2">GitHub Rep <i class="fab fa-github"></i></a>
+                    </div>
+
+              </div>
+          </div>           
+      </div>
+  </div>
+<!-- single card end -->
+<!-- side projects start -->
+<div class="work__side" data-sal="slide-up" data-sal-duration= "1400" data-sal-delay="0" data-sal-easing="ease-out-bounce">
+   <div class="work__side--title">
+    <div class="cool-title text-capitalize">  <!-- In typography scss -->
+      <h1 class="cool-title--horizontal"> Courses and <span class="cool-title--span"><strong>Projects</strong></span>  </h1>
+      <h1 class="cool-title--vertical"> My Side</h1>
+     </div>
+   </div>
+   <div class="work__side--projects">
+     <!-- single project -->
+     <div class="project">
+        <div class="projects--overlay"> </div>
+           <h2 class="project__h2 text-capitalize">JavaScript Real time chatroom</h2>
+           <div class="title__underline title__underline--small"></div>
+           <p class="project__p project__p--2">
+             In this project i learned how to connect front end part of website to google Firestore database, Firebase.
+             
+           </p>
+          <p class="project__p">
+
+        Chatroom was build using the latest ES6 features of JavaScript by coding along with Shuan Pelling a.k.a. "TheNetNinja".
+             <!-- Using the knowledge i gained from this project I implemented Firestore database in above mentioned website "Inesa Balic Art". 
+             I have made authentication for admin and connected the site to database allowing the admin to 
+             delete and write new blog posts on blog section of website. -->
+           </p> 
+           <a href="https://github.com/njonji/Ninja-Chat" class=" project__btn ">GitHub Repository <i class="fab fa-github"></i></a>
+          
+           
+    </div>
+     <!-- single project end-->
+     <!-- single project -->
+     <div class="project">
+        <div class="projects--overlay"> </div>
+           <h2 class="project__h2 text-capitalize">JavaScript Weather App</h2>
+           <div class="title__underline title__underline--small"></div>
+           <p class="project__p project__p--2">
+             In this project i learned all about JavaScript fetching features, XML, Async and Await, callback functions and promises and finnaly Axios.
+           </p>
+           <p class="project__p">
+            This Weather app was build using the latest ES6 features of JavaScript by coding along with Shuan Pelling a.k.a. "TheNetNinja".
+           </p>
+           <a href="https://github.com/njonji/Weather-App" class=" project__btn ">GitHub Repository <i class="fab fa-github"></i></a>
+    </div>
+     <!-- single project end-->
+     <!-- single project -->
+     <div class="project">
+        <div class="projects--overlay"> </div>
+           <h2 class="project__h2 text-capitalize">JavaScript Web Shop</h2>
+           <div class="title__underline title__underline--small"></div>
+           <p class="project__p project__p--2">
+             In this project I coded front end logic of a web shop using the newest ES6 vannila JavaScript features.
+           </p>
+           <p class="project__p ">
+             This Web shop was build coding along with John Smiliga a.k.a "Coding Addict"
+           </p>
+           <a href="https://github.com/njonji/Web-Shop-JS" class=" project__btn ">GitHub Repository <i class="fab fa-github"></i></a>
+    </div>
+     <!-- single project end-->
+   </div>
+</div>
+<!-- side projects end -->
+  </div>
+</section>
+<!-- work section end -->
+<!-- contact section start -->
+<section id="contact">
+  <div class="contact" data-sal="slide-up" data-sal-duration= "1400" data-sal-delay="0" data-sal-easing="ease-out-bounce">
+      <div class="contact__title ">
+        <h1 class="title--h1"><span class="title--span">Contact</span> Me</h1>
+        <div class="title__underline"></div>
+      </div>
+      <div class="contact__lijeva d-flex justify-content-center align-items-center">
+        
+            <img src="assets/img/contact/contactman.png" class="img-fluid contact__lijeva--image" alt="Contactman">
+
+            <div class="contact__lijeva--text">
+                <p> Want to work with me? <br> Feel free to contact me directly on my cell phone at +38761 368 464(Viber & WhatsApp) or on my email <a href="#" class="contact__lijeva--link">veladzicsenahid@yahoo.com</a>. 
+                  You can also contact me by using form on this site.
+                  </p>
+                 <p>If you live near me in Bihac, Bosnia, we can meet in person and talk shop while having a cup of coffee.</p>
+                 <img src="assets/img/contact/coffeeXS.png" class="img-fluid contact__lijeva--beer" alt="Beer">
+            </div>
+       
+       
+          
+      </div>
+      <div class="contact__desna">
+          <form action="https://formspree.io/veladzicsenahid@yahoo.com" method="POST">
+            <h4 class="contact__desna--h4">Send Message</h4>
+            <p class="contact__desna--p">You will be answered as soon as possible.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control contact__desna--placeholder" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                      <div class="form-group">
+                              <input type="email" name="email" class="form-control contact__desna--placeholder" id="email" placeholder="Email Adress"required>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="phone" class="form-control contact__desna--placeholder" id="phone" placeholder="Phone No.">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                      <div class="form-group">
+                              <input type="text" name="subject" class="form-control contact__desna--placeholder" id="subject" placeholder="Subject" required>
+                      </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control contact__desna--textarea"id="message" name="message" placeholder="Message"></textarea >
+            </div>
+            <div id="submit-btn">
+                <button class="butto butto-text butto-contact" title="text" role="button" type="submit">Submit</button>
+            </div>
+  
+        </form>
+      </div>
+  </div>
+</section>
+<!-- contact section end -->
+<!-- footer start -->
+<footer id="footer">
+   <div class="footer">
+      <div class="footer__main">
+         
+          <p class="footer__main--p">&copy; Copyright 2019 by MD Studio.  All rights reserved.</p>
+          <div class="footer__main--links">
+              <a href="#" class="footer__main--1"> Privacy policy</a>
+              <a href="sitemap.xml" class="footer__main--2"> Sitemap </a>
+              <a href="http://www.freepik.com" class="footer__resources--link">Freepik</a>
+          </div>
+      
+      </div>
+      <div class="footer__home">
+          <a href="#header" class="footer__home--link smooth-scroll"> <i class="far fa-arrow-alt-circle-up footer__home--link-up"></i></a>
+        </div>
+
+        <div class="footer__resources">
+            
+            
+           
+              
+          </div>
+   </div>
+
+   <!--  copyright -->
+   <!--  sitemap -->
+   <!--  privacy policy -->
+   <!--  return to home button -->
+   <!--  our mission -->
+</footer>
+<!-- footer end -->
 
 
 

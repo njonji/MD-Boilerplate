@@ -18,7 +18,10 @@ module.exports = {
   optimization: {
     minimizer:[new OptimizeCssAssetsPlugin(), new TerserPlugin()]
   },
-  plugins:[new MiniCssExtractPlugin({filename:"[name].css"}), new webpack.LoaderOptionsPlugin({options: { postcss: [autoprefixer()]}})],
+  plugins:[new MiniCssExtractPlugin({filename:"[name].css"}),
+          new webpack.LoaderOptionsPlugin({options: { postcss: [autoprefixer()]}}),
+     
+  ],
   module: {
     rules: [{
       test: /\.js$/,
@@ -43,6 +46,17 @@ module.exports = {
        "postcss-loader",
        "sass-loader"
      ]
-   }]
+   },
+   {
+    test: require.resolve('jquery'),
+    use: [{
+        loader: 'expose-loader',
+        options: 'jQuery'
+    }, {
+        loader: 'expose-loader',
+        options: '$'
+    }]
+    },]
   }
+ 
 };

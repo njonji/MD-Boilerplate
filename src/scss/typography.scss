@@ -1,22 +1,22 @@
-.customBtn {
+.butto {
     &,
     &:link,
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.4rem 2.3rem;
+        padding: 1.2rem 2rem;
         display: inline-block;
         border-radius: 0.3rem;
-        letter-spacing: .2rem;
-        
+        color:$color-white;
         position: relative;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 700;
         margin-top: 1rem;
 
         border:none;
         cursor: pointer;
         transition: all .3s linear;
+
        
     }
     
@@ -39,7 +39,15 @@
     
     &--white {
         background-color:$color-primary;
-        color:#fff;
+        color:$color-white;
+        &::after {
+            background-color: $color-primary;
+            color:#000;
+        }
+        &:hover {
+            background-color: $color-primary;
+            
+        }
     }
     &--green {
         background-color: $color-primary;
@@ -72,7 +80,7 @@
 
 }
 
-.customBtn-text {
+.butto-text {
     &:link,
     &:visited {
         font-size: 1.4rem;
@@ -99,22 +107,109 @@
       }
    }
 
-
-   /* CUSTOM NAV TOGGLER */
-   .bars {
-       width: 3.5rem;
-       height: 5px;
-       background-color: #333;
-       margin: 6px 0;
-       transition: .4s ease;
+   .butto-contact {
+       color: $color-white;
+       background: $color-primary;
    }
 
-  .change1 {
-      transform: rotate(-45deg) translate(-9px, 6px);
+
+  /*  TITLE */
+.title {
+    text-align: center;
+    color: $color-white;
+    align-self: center;
+    
+    &--h1 {
+        font-size: 3.5rem;
+        @media only screen and (max-width:$bp-small) {
+           font-size: 3rem;
+         }
+        @media only screen and (max-width:$bp-small-3) {
+           font-size: 2.7rem;
+         }
+    }
+    &--span {
+        color: $color-primary;
+        font-weight: 700;
+    }
+
+}
+.title__dark {
+    text-align: center;
+    color: $color-text;
+    align-self: center;
+    
+    &--h1 {
+        font-size: 3.5rem;
+        @media only screen and (max-width:$bp-small) {
+           font-size: 3rem;
+         }
+        @media only screen and (max-width:$bp-small-3) {
+           font-size: 2.7rem;
+         }
+    }
+    &--span {
+        color: $color-primary;
+        font-weight: 700;
+    }
+
+}
+
+/* VERTICAL AND HORIZONTAL TITLE */
+.cool-title {
+    position: relative;
+    
+
+    &--horizontal {
+        color: $color-text;
+        font-size: 3rem;
+        font-weight: 400;  
+        letter-spacing: .3rem;
+        @media only screen and (max-width:$bp-small) {
+            font-size: 2.7rem;
+        } 
+    }
+    &--vertical {
+        font-size: 3rem;
+        font-weight: 400;  
+        color: $color-text;
+        letter-spacing: .3rem;
+        display: inline-block;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 8rem;
+        left: -11rem;
+
+        @media only screen and (max-width:$bp-small) {
+            left:-8rem;
+            top: 7rem;
+            font-size: 2.7rem;
+        } 
+    }
+    &--span {
+        color: $color-primary;
+    }
+}
+ 
+
+   /*  UNDERLINE FOR TITLES */
+
+   .title__underline {
+    width: 10rem;
+    height: .3rem;
+    background: $color-primary;
+    margin: .5rem auto;
+    transition: all .5s linear;
+
+    &--small {
+        height: .2rem;
+        width: 7rem;
+    }
+
+    &--inesa {
+       background: #dcb300;
+    }
+    &--harba {
+       background: #D14531;
+    }
   }
-  .change3 {
-      transform: rotate(45deg) translate(-8px, -8px);
-  }
-  .change2 {
-      opacity: 0;
-  } 

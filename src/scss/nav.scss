@@ -1,6 +1,5 @@
 .navbar {
      
-     
     clip-path: polygon(0 0, 100% 0,100% 65%,50% 100%, 0 65%);
     background: $color-grey-light;
     z-index: 20;
@@ -14,7 +13,9 @@
     }
 
     &--logo {
-      padding-bottom: 3.5rem;
+      padding-bottom: 4rem;
+      padding-top: 2rem;
+       max-width: 20rem;
     }
   }
   .navbar-icon {
@@ -24,6 +25,7 @@
   .navbar-toggler {
     outline: none !important;
     padding-bottom: 3.5rem !important;
+
   }
   .nav-link {
     color: $color-text;
@@ -50,3 +52,218 @@
       opacity: 1;
   }
 
+  
+   /* CUSTOM NAV TOGGLER */
+   .bars {
+    width: 3.5rem;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: .4s ease;
+
+
+
+    &__second {
+      background-color: $color-white;
+    }
+}
+
+.change1 {
+   transform: rotate(-45deg) translate(-9px, 6px);
+   @media only screen and (max-width:$bp-small-3) {
+    transform: rotate(-45deg) translate(-6px, 5px);
+ }
+}
+.change3 {
+   transform: rotate(45deg) translate(-8px, -8px);
+   @media only screen and (max-width:$bp-small-3) {
+    transform: rotate(45deg) translate(-10px, -10px);
+ }
+   
+}
+.change2 {
+   opacity: 0;
+} 
+
+/* SECOND NAV  */
+.navigation {
+   opacity: 0;
+   transition: all .5s linear; 
+
+  &__checkbox {
+     display: none;
+
+  }
+
+  &__icon {
+    position: fixed;
+    top: 7.6rem;
+    right: 7.7rem;
+          @media only screen and (max-width:$bp-large) {
+            top: 7.5rem;
+            right: 8rem;
+          } 
+  
+          @media only screen and (max-width:$bp-small) {
+            top: 7.4rem;
+           right: 6rem;
+          
+        } 
+      
+      
+  }
+  &__button {
+       background-color: $color-primary;
+       height: 7rem;
+       width: 7rem;
+       position: fixed;
+       top: 6rem;
+       right: 6rem;
+       border-radius: 50%;
+       z-index: 2000;
+       cursor: pointer;
+          @media only screen and (max-width:$bp-large) {
+            height:7.5rem;
+            width:7.5rem;
+        } 
+        
+        @media only screen and (max-width:$bp-small) {
+          right: 4rem;
+         
+       } 
+    
+  }
+
+  &__background {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      position: fixed;
+      top:6.5rem;
+      right: 6.5rem;
+      background-image: radial-gradient($color-secondary, $color-secondary-dark);
+      z-index: 1000;
+      transition: all .5s ease-in-out;
+          @media only screen and (max-width:$bp-large) {
+            height:6.5rem;
+            width:6.5rem;
+        } 
+        @media only screen and (max-width:$bp-small) {
+          right: 4.5rem;
+         
+       } 
+
+      &--onClick {
+       transform: scale(35);  
+
+            @media only screen and (max-width:$bp-wide-1) {
+              transform: scale(30);  
+            } 
+            @media only screen and (max-width:$bp-wide-4) {
+              transform: scale(25);  
+              } 
+          
+                @media only screen and (max-width:$bp-small-4) {
+                  transform: scale(17);  
+              } 
+           
+      }
+     
+      
+
+  }
+
+  &__nav {
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     right: 0;
+     z-index: 1500;
+     opacity: 0;
+     width: 0;
+     transition: all .5s ease-in-out;
+
+     &--onClick {
+       opacity: 1;
+       width: 100%;
+     }
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    text-align: center;
+
+    
+          @media only screen and (max-width:$bp-huge-2) {
+            left: 65%;
+          } 
+          @media only screen and (max-width:$bp-large) {
+            top: 40%;
+            left: 68%;
+          } 
+          @media only screen and (max-width:$bp-medium) {
+            top: 40%;
+            left: 62%;
+          } 
+  
+          @media only screen and (max-width:$bp-small) {
+          left: 58%;
+          
+          
+          } 
+          @media only screen and (max-width:$bp-small-2) {
+          left: 52%;
+          
+          } 
+          @media only screen and (max-width:$bp-small-4) {
+          left: 47%;
+          top:35%;
+          
+          } 
+  
+
+     }
+  
+  &__item {
+      margin: 1rem;
+  }
+
+  &__logo {
+    margin-bottom: 5rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 3.5rem;
+      font-weight: 400;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: all .5s linear;
+
+      @media only screen and (max-width:$bp-small) {
+        font-size: 3rem;
+        
+        } 
+
+    }
+  
+     &:hover {
+      color: $color-primary;
+     }
+     &:hover ~.underline {
+       opacity: 1;
+     }
+
+  }
+}
+
+
+.showSecondNav {
+   opacity: 1;
+}

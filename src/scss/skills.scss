@@ -1,0 +1,101 @@
+#skills {
+    margin-top: 4.5rem;
+    padding-top: 4.5rem;
+}
+
+.skills {
+    min-height: 42rem;
+    background:linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url("/assets/img/banner/skills2.jpg")center/cover fixed no-repeat;
+    display: grid;
+    grid-template-rows: 10rem 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
+    padding-top: 2rem;
+
+    @media only screen and (max-width:$bp-large) {
+        background:linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url("/assets/img/banner/skills2MD.jpg")center/cover fixed no-repeat;
+     }
+
+   
+
+    &__title {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+
+    }
+
+    &__text {
+        grid-row: 2 / -1;
+        grid-column: 4 / 10;
+        text-align: center;
+
+        @media only screen and (max-width:$bp-wide-2) {
+            grid-column: 3 / 11;
+         }
+        @media only screen and (max-width:$bp-small) {
+            grid-column: 2 / 12;
+         }
+
+        &--p {
+            font-size: 1.8rem;
+            color: $color-white;
+            @media only screen and (max-width:$bp-small-2) {
+                font-size: 1.6rem;
+             }
+        }
+    }
+
+    &__icons {
+        grid-row: 2 / -1;
+        grid-column: 5 / 9;
+        align-self: end;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        text-align: center;
+        background: $color-white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        margin-bottom: -8rem;
+        @media only screen and (max-width:$bp-wide-2) {
+            grid-column: 4 / 10;
+         }
+        @media only screen and (max-width:$bp-medium) {
+            grid-column: 3 / 11;
+         }
+        @media only screen and (max-width:$bp-small-3) {
+            grid-column: 2 / 12;
+         }
+
+
+        &--all {
+            font-size: 5.5rem;
+            color: $color-primary;
+            padding: 1rem .5rem 1rem .5rem;
+            @media only screen and (max-width:$bp-small) {
+                font-size: 5rem;
+             }
+            @media only screen and (max-width:$bp-small-2) {
+                font-size: 4.5rem;
+             }
+        }
+
+        &--p {
+            font-size: 1.7rem;
+            font-weight: bold;
+            letter-spacing: .1rem;
+            padding: 0 1.6rem;
+            color: $color-text;
+            text-align: center;
+            text-transform: capitalize;
+            @media only screen and (max-width:$bp-small) {
+                font-size: 1.5rem;
+             }
+            @media only screen and (max-width:$bp-small-3) {
+                font-size: 1.3rem;
+             }
+        }
+    }
+}
